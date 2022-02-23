@@ -1,19 +1,20 @@
 import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
-
 import LearningOptions from "./components/LearningOptions/LearningOptions";
 import LinkList from "./components/LinkList/LinkList";
 import LearningOptionsSpringboot from "./components/LearningOptionsSpringboot/LearningOptionsSpringboot";
-
+import Message from "./components/Message/Message";
 const config = {
   botName: "Bot",
   initialMessages: [
-    createChatBotMessage("Hi, I'm here to help. What do you want to learn?", {
-      widget: "learningOptions",
+    createChatBotMessage("Hi, I'm here to help. What do you want to Ask", {
+      //widget: "learningOptions",
+      
     }),
   ],
   customStyles: {
     botMessageBox: {
+     
       backgroundColor: "green",
     },
     chatButton: {
@@ -30,11 +31,11 @@ const config = {
       widgetFunc: (props) => <LearningOptionsSpringboot/>,
     },
 
+    {
+      widgetName: "Message",
+      widgetFunc: (props) => <Message/>,
+    },
 
-    // {
-    //     widgetName :"fromApi",
-    //     widgetFunc:(props)=><ApiResponse {...props}/>
-    // },
     {
       widgetName: "javascriptLinks",
       widgetFunc: (props) => <LinkList {...props} />,

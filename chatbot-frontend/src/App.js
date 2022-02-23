@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <Chatbot config={config} actionProvider={ActionProvider} 	 messageParser={MessageParser} />
+      
       </header>
     </div>
   );
